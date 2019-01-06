@@ -6,6 +6,7 @@ export default () => (
     <Head>
       <title>akd.io</title>
       <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" />
     </Head>
     <div className="card">
       <img src="static/picture.png" />
