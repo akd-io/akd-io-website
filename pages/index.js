@@ -1,11 +1,15 @@
-import Head from "next/head";
-import "./index.scss";
+import Head from 'next/head';
+import './index.scss';
 
 export default () => (
   <>
     <Head>
       <title>akd.io</title>
       <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+      <meta
+        name="description"
+        content="The website of Anders Kjær Damgaard, a Software Developer based in Copenhagen."
+      />
       <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" />
     </Head>
     <div className="card">
