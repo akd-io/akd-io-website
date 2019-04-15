@@ -10,6 +10,11 @@ export default () => (
         name="description"
         content="The website of Anders Kjær Damgaard, a Software Developer based in Copenhagen."
       />
+      <meta
+        name="keywords"
+        content="Anders Kjær Damgaard, frontend, web, software, developer, development"
+      />
+      <meta name="robots" content="index/follow" />
       <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" />
     </Head>
     <div className="card">
