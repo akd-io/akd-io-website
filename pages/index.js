@@ -4,7 +4,7 @@ import './index.scss';
 export default () => (
   <>
     <Head>
-      <title>akd.io</title>
+      <title>Anders Kjær Damgaard</title>
       <meta name="viewport" content="width=device-width,initial-scale=1.0" />
       <meta
         name="description"
