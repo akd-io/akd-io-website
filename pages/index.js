@@ -18,7 +18,9 @@ export default () => (
       <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" />
     </Head>
     <div className="card">
-      <img src="static/picture.png" />
+      <div className="profile-picture-container">
+        <img src="static/picture.png" />
+      </div>
       <h1 className="name">Anders Kjær Damgaard</h1>
       <h2 className="position">Software Developer</h2>
       <h3 className="location">Copenhagen, Denmark</h3>
