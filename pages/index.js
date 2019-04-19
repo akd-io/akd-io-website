@@ -18,7 +18,7 @@ export default () => (
     </Head>
     <div className="card">
       <div className="profile-picture-container">
-        <img src="static/picture.png" />
+        <img src="static/picture.png" alt="Circular portrait photograph of Anders Kjær Damgaard." />
       </div>
       <h1 className="name">Anders Kjær Damgaard</h1>
       <h2 className="position">Software Developer</h2>
