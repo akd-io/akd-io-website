@@ -4,7 +4,7 @@ const fs = require('fs');
 const source = __dirname + '/favicon.png';
 
 const configuration = {
-  path: '/', // Path for overriding default icons path. `string`
+  path: '/static/favicons/', // Path for overriding default icons path. `string`
   appName: 'akd.io', // Your application's name. `string`
   appShortName: null, // Your application's short_name. `string`. Optional. If not set, appName will be used
   appDescription: null, // Your application's description. `string`
