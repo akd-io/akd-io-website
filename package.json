@@ -7,7 +7,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "gen-favicons": "node ./favicons/generate-favicons.js"
+    "favicons": "node ./favicons/generate-favicons.js"
   },
   "repository": {
     "type": "git",
