@@ -51,16 +51,20 @@ function callback(error, response) {
     return;
   }
 
-  for (image of response.images)
-    fs.writeFileSync(__dirname + '/dist/images/' + image.name, image.contents);
+  const distPath = __dirname + '/dist';
+  const imagesPath = distPath + '/images';
+  const filesPath = distPath + '/files';
+  if (!fs.existsSync(distPath)) fs.mkdirSync(distPath);
+  if (!fs.existsSync(imagesPath)) fs.mkdirSync(imagesPath);
+  if (!fs.existsSync(filesPath)) fs.mkdirSync(filesPath);
 
-  for (file of response.files)
-    fs.writeFileSync(__dirname + '/dist/files/' + file.name, file.contents);
+  for (image of response.images) fs.writeFileSync(imagesPath + '/' + image.name, image.contents);
+
+  for (file of response.files) fs.writeFileSync(filesPath + '/' + file.name, file.contents);
 
   var htmlString = '';
   for (line of response.html) htmlString += line + '\n';
-
-  fs.writeFileSync(__dirname + '/dist/html.html', htmlString);
+  fs.writeFileSync(distPath + '/html.html', htmlString);
 }
 
 favicons(source, configuration, callback);
