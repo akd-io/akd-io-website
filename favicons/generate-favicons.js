@@ -1,14 +1,15 @@
 const favicons = require('favicons');
+const fs = require('fs');
 
 const source = __dirname + '/favicon.png';
 
 const configuration = {
   path: '/', // Path for overriding default icons path. `string`
-  appName: null, // Your application's name. `string`
+  appName: 'akd.io', // Your application's name. `string`
   appShortName: null, // Your application's short_name. `string`. Optional. If not set, appName will be used
   appDescription: null, // Your application's description. `string`
-  developerName: null, // Your (or your developer's) name. `string`
-  developerURL: null, // Your (or your developer's) URL. `string`
+  developerName: 'Anders Kjær Damgaard', // Your (or your developer's) name. `string`
+  developerURL: 'https://akd.io', // Your (or your developer's) URL. `string`
   dir: 'auto', // Primary text direction for name, short_name, and description
   lang: 'en-US', // Primary language for name and short_name
   background: '#fff', // Background colour for flattened icons. `string`
@@ -33,25 +34,33 @@ const configuration = {
     //   * overlayGlow - apply glow effect after mask has been applied (applied by default for firefox). `boolean`
     //   * overlayShadow - apply drop shadow after mask has been applied .`boolean`
     //
-    android: true, // Create Android homescreen icon. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }`
-    appleIcon: true, // Create Apple touch icons. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }`
-    appleStartup: true, // Create Apple startup images. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }`
-    coast: true, // Create Opera Coast icon. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }`
+    android: false, // Create Android homescreen icon. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }`
+    appleIcon: false, // Create Apple touch icons. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }`
+    appleStartup: false, // Create Apple startup images. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }`
+    coast: false, // Create Opera Coast icon. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }`
     favicons: true, // Create regular favicons. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }`
-    firefox: true, // Create Firefox OS icons. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }`
-    windows: true, // Create Windows 8 tile icons. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }`
-    yandex: true, // Create Yandex browser icon. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }`
+    firefox: false, // Create Firefox OS icons. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }`
+    windows: false, // Create Windows 8 tile icons. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }`
+    yandex: false, // Create Yandex browser icon. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }`
   },
 };
 
-const callback = function(error, response) {
+function callback(error, response) {
   if (error) {
     console.error(error.message); // Error description e.g. "An unknown error has occurred"
     return;
   }
-  console.log(response.images); // Array of { name: string, contents: <buffer> }
-  console.log(response.files); // Array of { name: string, contents: <string> }
-  console.log(response.html); // Array of strings (html elements)
-};
+
+  for (image of response.images)
+    fs.writeFileSync(__dirname + '/dist/images/' + image.name, image.contents);
+
+  for (file of response.files)
+    fs.writeFileSync(__dirname + '/dist/files/' + file.name, file.contents);
+
+  var htmlString = '';
+  for (line of response.html) htmlString += line + '\n';
+
+  fs.writeFileSync(__dirname + '/dist/html.html', htmlString);
+}
 
 favicons(source, configuration, callback);
