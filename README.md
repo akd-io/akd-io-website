@@ -1,6 +1,6 @@
-# akd-io
+# akd.io
 
-This is the repository of the website of Anders Kjær Damgaard at https://akd.io/.
+This is the repository for the website of Anders Kjær Damgaard at https://akd.io/.
 
 ## Development
 
