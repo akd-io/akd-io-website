@@ -1,6 +1,6 @@
 # akd.io
 
-This is the repository for the website of Anders Kjær Damgaard at https://akd.io/.
+This is the repository for the website of Anders Kjær Damgaard at [akd.io](https://akd.io/).
 
 ## Development
 
@@ -17,8 +17,8 @@ With Next comes the following commands:
 The repository includes `now.json` and `next.config.js` files to configure [Zeit Now](https://zeit.co/now) deployments.
 If you have an account set up with [now-cli](https://github.com/zeit/now-cli), you can deploy to your own Zeit Now account with the `now` command.
 
-The repository integrates with the [Now GitHub app](https://zeit.co/github) to deliver continuous deployments with deployments on every pull request, as well as https://akd.io/ automatically reflecting the master branch.
+The repository integrates with the [Now GitHub app](https://zeit.co/github) to deliver continuous deployments with deployments on every pull request, as well as [akd.io](https://akd.io/) automatically reflecting the master branch.
 
 ## Contribution
 
-This is my personal site, and I'm not looking for help developing it. If you do find a bug however, and feel like fixing it, I'd be happy to receive pull requests.
+This is my personal site, and I'm not looking for contribution. If you do find a bug, however, and feel like fixing it, I'd be happy to receive pull requests.
