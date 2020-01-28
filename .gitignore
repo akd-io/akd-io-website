@@ -60,5 +60,8 @@ typings/
 # next.js build output
 .next
 
+# next.js export output
+out/
+
 # generate-favicons output
 favicons/dist
