@@ -3,7 +3,7 @@ import 'normalize.css';
 import React from 'react';
 import './index.scss';
 
-export default () => (
+const Index = () => (
   <>
     <Head>
       <title>Anders Kjær Damgaard</title>
@@ -41,3 +41,5 @@ export default () => (
     </div>
   </>
 );
+
+export default Index;
