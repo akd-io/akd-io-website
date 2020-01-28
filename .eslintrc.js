@@ -22,4 +22,12 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint'],
   rules: {},
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx'],
+      rules: {
+        '@typescript-eslint/explicit-function-return-type': ['error'],
+      },
+    },
+  ],
 };
