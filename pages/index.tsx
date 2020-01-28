@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import 'normalize.css';
+import React from 'react';
 import './index.scss';
 
 export default () => (
