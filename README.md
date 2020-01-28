@@ -2,23 +2,25 @@
 
 This is the repository for the website of Anders Kjær Damgaard at [akd.io](https://akd.io/).
 
+## Setup
+
+1. Run `npm i -g yarn` - Install the Yarn package manager globally.
+2. Run `yarn` - Install dependencies.
+
 ## Development
 
-The site uses [Next.js](https://nextjs.org/) to easily develop server-rendered react sites.
+✏️ Run `yarn dev` to host the site in development mode featuring hot-reloading.  
 
-With Next comes the following commands:
+🛠 Run `yarn build` to build the site.  
 
-- `npm run dev` - Runs the site in dev mode featuring hot-reloading.
-- `npm run build` - Builds the site.
-- `npm run start` - Starts a server hosting the build on localhost.
+📤 Run `yarn export` to export the site as static files.  
+
+🚀 Run `yarn start` to launch the site on a local web server.
 
 ## Deployment
 
-The repository includes `now.json` and `next.config.js` files to configure [Zeit Now](https://zeit.co/now) deployments.
-If you have an account set up with [now-cli](https://github.com/zeit/now-cli), you can deploy to your own Zeit Now account with the `now` command.
-
-The repository integrates with the [Now GitHub app](https://zeit.co/github) to deliver continuous deployments with deployments on every pull request, as well as [akd.io](https://akd.io/) automatically reflecting the master branch.
+The repository integrates with the [ZEIT Now for GitHub](https://zeit.co/github) integration to deliver continuous deployments from pull requests.
 
 ## Contribution
 
-This is my personal site, and I'm not looking for contribution. If you do find a bug, however, and feel like fixing it, I'd be happy to receive pull requests.
+This is my personal site, and I'm not looking for content contribution. If you do find a bug, however, let me know or send me a pull request! ❤
