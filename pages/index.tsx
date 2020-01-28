@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import './index.scss';
 import 'normalize.css';
+import './index.scss';
 
 export default () => (
   <>
