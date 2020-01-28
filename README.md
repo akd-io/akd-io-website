@@ -10,8 +10,11 @@ This is the repository for the website of Anders Kjær Damgaard at [akd.io](http
 ## Development
 
 ✏️ Run `yarn dev` to host the site in development mode featuring hot-reloading.  
+
 🛠 Run `yarn build` to build the site.  
+
 📤 Run `yarn export` to export the site as static files.  
+
 🚀 Run `yarn start` to launch the site on a local web server.
 
 ## Deployment
