@@ -163,10 +163,14 @@ const Index: NextPage = () => (
     <Global styles={globalStyles} />
     <Card>
       <ProfilePictureContainer className="profile-picture-container">
-        <ProfilePicture
-          src="static/picture.png"
-          alt="Circular portrait photograph of Anders Kjær Damgaard."
-        />
+        <picture>
+          <source srcSet={require('../public/static/picture.png?webp')} type="image/webp" />
+          <source srcSet={require('../public/static/picture.png')} type="image/png" />
+          <ProfilePicture
+            src={require('../public/static/picture.png')}
+            alt="Circular portrait photograph of Anders Kjær Damgaard."
+          />
+        </picture>
       </ProfilePictureContainer>
       <NameHeader>Anders Kjær Damgaard</NameHeader>
       <PositionHeader>Software Developer</PositionHeader>
