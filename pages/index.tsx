@@ -91,6 +91,11 @@ const ProfilePicture = styled.img`
   height: 100%;
 `;
 
+const Description = styled.p`
+  font-size: 16px;
+  line-height: 1.25em;
+`;
+
 const Index: NextPage = () => (
   <>
     <Head>
@@ -112,16 +117,19 @@ const Index: NextPage = () => (
     <Global styles={globalStyles} />
     <Card>
       <ProfilePictureContainer className="profile-picture-container">
-        <ProfilePicture src="static/picture.png" alt="Circular portrait photograph of Anders Kjær Damgaard." />
+        <ProfilePicture
+          src="static/picture.png"
+          alt="Circular portrait photograph of Anders Kjær Damgaard."
+        />
       </ProfilePictureContainer>
       <h1 className="name">Anders Kjær Damgaard</h1>
       <h2 className="position">Software Developer</h2>
       <h3 className="location">Copenhagen, Denmark</h3>
-      <p className="description">
+      <Description>
         Software development and computer science is an old, long-lasting passion of mine. A passion
         that my curiosity has always led me to, and one that I am currently enjoying, doing frontend
         development using modern web technologies.
-      </p>
+      </Description>
       <div className="social-media">
         <a href="https://www.linkedin.com/in/anders-damgaard/">LinkedIn</a>
         <a href="https://github.com/akd-io">GitHub</a>
