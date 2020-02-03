@@ -2,7 +2,6 @@ import { css, Global } from '@emotion/core';
 import styled from '@emotion/styled';
 import { NextPage } from 'next';
 import Head from 'next/head';
-import 'normalize.css';
 import React from 'react';
 
 const cardBreakpoint = '520px';
