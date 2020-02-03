@@ -75,6 +75,14 @@ const Card = styled.div`
   }
 `;
 
+const ProfilePictureContainer = styled.div`
+  position: relative;
+  width: 65%;
+  padding-bottom: 65%;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.1);
+`;
+
 const Index: NextPage = () => (
   <>
     <Head>
@@ -95,9 +103,9 @@ const Index: NextPage = () => (
     </Head>
     <Global styles={globalStyles} />
     <Card>
-      <div className="profile-picture-container">
+      <ProfilePictureContainer className="profile-picture-container">
         <img src="static/picture.png" alt="Circular portrait photograph of Anders Kjær Damgaard." />
-      </div>
+      </ProfilePictureContainer>
       <h1 className="name">Anders Kjær Damgaard</h1>
       <h2 className="position">Software Developer</h2>
       <h3 className="location">Copenhagen, Denmark</h3>
