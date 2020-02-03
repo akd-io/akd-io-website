@@ -1,8 +1,10 @@
+import { NextPage } from 'next';
 import Head from 'next/head';
-import './index.scss';
 import 'normalize.css';
+import React from 'react';
+import './index.scss';
 
-export default () => (
+const Index: NextPage = () => (
   <>
     <Head>
       <title>Anders Kjær Damgaard</title>
@@ -40,3 +42,5 @@ export default () => (
     </div>
   </>
 );
+
+export default Index;
