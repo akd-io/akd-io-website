@@ -25,6 +25,7 @@
     "@emotion/styled": "^10.0.27",
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
+    "babel-plugin-emotion": "^10.0.27",
     "next": "^9.1.7",
     "node-sass": "^4.13.0",
     "normalize.css": "^8.0.1",
