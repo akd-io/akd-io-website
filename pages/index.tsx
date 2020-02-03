@@ -1,4 +1,5 @@
 import { css, Global } from '@emotion/core';
+import styled from '@emotion/styled';
 import { NextPage } from 'next';
 import Head from 'next/head';
 import 'normalize.css';
@@ -32,6 +33,48 @@ const globalStyles = css`
   }
 `;
 
+const Card = styled.div`
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: white;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-right: 40px;
+  padding-left: 40px;
+  animation-name: fadein;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+
+  @keyframes fadein {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media only screen and (min-width: ${cardBreakpoint}) {
+    min-height: 0;
+    max-width: 440px;
+    margin: 40px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  & > * {
+    margin: 0;
+    margin-bottom: 25px;
+  }
+`;
+
 const Index: NextPage = () => (
   <>
     <Head>
@@ -51,7 +94,7 @@ const Index: NextPage = () => (
       <meta name="robots" content="index,follow" />
     </Head>
     <Global styles={globalStyles} />
-    <div className="card">
+    <Card>
       <div className="profile-picture-container">
         <img src="static/picture.png" alt="Circular portrait photograph of Anders Kjær Damgaard." />
       </div>
@@ -68,7 +111,7 @@ const Index: NextPage = () => (
         <a href="https://github.com/akd-io">GitHub</a>
         <a href="mailto:akd@akd.io">Email</a>
       </div>
-    </div>
+    </Card>
   </>
 );
 
