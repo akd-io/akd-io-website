@@ -168,7 +168,7 @@ const Index: NextPage = () => (
           <source srcSet={require('../public/static/picture.png')} type="image/png" />
           <ProfilePicture
             src={require('../public/static/picture.png')}
-            alt="Circular portrait photograph of Anders Kjær Damgaard."
+            alt="Portrait photograph of Anders Kjær Damgaard."
           />
         </picture>
       </ProfilePictureContainer>
