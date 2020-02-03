@@ -1,8 +1,36 @@
+import { css, Global } from '@emotion/core';
 import { NextPage } from 'next';
 import Head from 'next/head';
 import 'normalize.css';
 import React from 'react';
 import './index.scss';
+
+const cardBreakpoint = '520px';
+const lightGrey = '#eee';
+
+const globalStyles = css`
+  html,
+  body,
+  div#__next {
+    min-height: 100vh;
+  }
+
+  body {
+    background: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif,
+      'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+    @media only screen and (min-width: ${cardBreakpoint}) {
+      background: ${lightGrey};
+    }
+  }
+
+  div#__next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+`;
 
 const Index: NextPage = () => (
   <>
@@ -22,6 +50,7 @@ const Index: NextPage = () => (
       />
       <meta name="robots" content="index,follow" />
     </Head>
+    <Global styles={globalStyles} />
     <div className="card">
       <div className="profile-picture-container">
         <img src="static/picture.png" alt="Circular portrait photograph of Anders Kjær Damgaard." />
