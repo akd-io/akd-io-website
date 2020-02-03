@@ -91,6 +91,23 @@ const ProfilePicture = styled.img`
   height: 100%;
 `;
 
+const NameHeader = styled.h1`
+  font-size: 30px;
+  font-weight: 700;
+`;
+
+const PositionHeader = styled.h2`
+  margin-bottom: 0;
+  font-size: 25px;
+  font-weight: 300;
+`;
+
+const LocationHeader = styled.h3`
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: 300;
+`;
+
 const Description = styled.p`
   font-size: 16px;
   line-height: 1.25em;
@@ -122,9 +139,9 @@ const Index: NextPage = () => (
           alt="Circular portrait photograph of Anders Kjær Damgaard."
         />
       </ProfilePictureContainer>
-      <h1 className="name">Anders Kjær Damgaard</h1>
-      <h2 className="position">Software Developer</h2>
-      <h3 className="location">Copenhagen, Denmark</h3>
+      <NameHeader>Anders Kjær Damgaard</NameHeader>
+      <PositionHeader>Software Developer</PositionHeader>
+      <LocationHeader>Copenhagen, Denmark</LocationHeader>
       <Description>
         Software development and computer science is an old, long-lasting passion of mine. A passion
         that my curiosity has always led me to, and one that I am currently enjoying, doing frontend
