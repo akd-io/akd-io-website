@@ -83,6 +83,14 @@ const ProfilePictureContainer = styled.div`
   background-color: rgba(0, 0, 0, 0.1);
 `;
 
+const ProfilePicture = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+`;
+
 const Index: NextPage = () => (
   <>
     <Head>
@@ -104,7 +112,7 @@ const Index: NextPage = () => (
     <Global styles={globalStyles} />
     <Card>
       <ProfilePictureContainer className="profile-picture-container">
-        <img src="static/picture.png" alt="Circular portrait photograph of Anders Kjær Damgaard." />
+        <ProfilePicture src="static/picture.png" alt="Circular portrait photograph of Anders Kjær Damgaard." />
       </ProfilePictureContainer>
       <h1 className="name">Anders Kjær Damgaard</h1>
       <h2 className="position">Software Developer</h2>
