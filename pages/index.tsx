@@ -69,9 +69,9 @@ const Card = styled.div`
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
   }
 
-  & > * {
+  & > * + * {
     margin: 0;
-    margin-bottom: 25px;
+    margin-top: 25px;
   }
 `;
 
