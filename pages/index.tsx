@@ -147,7 +147,7 @@ const Index: NextPage = () => (
         that my curiosity has always led me to, and one that I am currently enjoying, doing frontend
         development using modern web technologies.
       </Description>
-      <div className="social-media">
+      <div>
         <a href="https://www.linkedin.com/in/anders-damgaard/">LinkedIn</a>
         <a href="https://github.com/akd-io">GitHub</a>
         <a href="mailto:akd@akd.io">Email</a>
