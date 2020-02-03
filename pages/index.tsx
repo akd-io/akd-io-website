@@ -4,10 +4,10 @@ import { NextPage } from 'next';
 import Head from 'next/head';
 import 'normalize.css';
 import React from 'react';
-import './index.scss';
 
 const cardBreakpoint = '520px';
 const lightGrey = '#eee';
+const darkGrey = '#111';
 
 const globalStyles = css`
   html,
@@ -113,6 +113,36 @@ const Description = styled.p`
   line-height: 1.25em;
 `;
 
+const Button = styled.a`
+  display: inline-block;
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-top: 1em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  border: 1px solid ${darkGrey};
+  border-radius: 0.3em;
+  background: ${darkGrey};
+  color: white;
+  text-decoration: none;
+  transition: color 0.1s, background-color 0.1s;
+
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+
+  &:hover,
+  &:active {
+    background: white;
+    color: black;
+  }
+`;
+
 const Index: NextPage = () => (
   <>
     <Head>
@@ -148,9 +178,9 @@ const Index: NextPage = () => (
         development using modern web technologies.
       </Description>
       <div>
-        <a href="https://www.linkedin.com/in/anders-damgaard/">LinkedIn</a>
-        <a href="https://github.com/akd-io">GitHub</a>
-        <a href="mailto:akd@akd.io">Email</a>
+        <Button href="https://www.linkedin.com/in/anders-damgaard/">LinkedIn</Button>
+        <Button href="https://github.com/akd-io">GitHub</Button>
+        <Button href="mailto:akd@akd.io">Email</Button>
       </div>
     </Card>
   </>
