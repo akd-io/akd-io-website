@@ -32,6 +32,8 @@
     "normalize.css": "^8.0.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "responsive-loader": "^1.2.0",
+    "sharp": "^0.24.0",
     "webp-loader": "^0.6.0"
   },
   "devDependencies": {
