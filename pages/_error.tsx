@@ -31,8 +31,7 @@ const A = styled(UnstyledA)`
 
 class MyError extends Error {
   render = (): JSX.Element => {
-    //    const { statusCode } = this.props;
-    const statusCode: number = 500;
+    const { statusCode } = this.props;
 
     let title = 'Error';
     let header = <H1>An error occured</H1>;
