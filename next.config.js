@@ -6,10 +6,15 @@ module.exports = withPlugins([
     nextOptimizedImages,
     {
       mozjpeg: {
-        quality: 90,
+        quality: 80,
       },
       pngquant: {
-        quality: [0.9, 1.0],
+        quality: [0.7, 0.8],
+        /*
+        TODO: OBS! Don't use resize and format conversion before next-optimized-images v3.
+        Resize and format conversion does not work in combination with image compression, which is the most important feature.
+        Read more at https://github.com/cyrilwanner/next-optimized-images/issues/120
+        */
       },
       webp: {
         quality: 90,
