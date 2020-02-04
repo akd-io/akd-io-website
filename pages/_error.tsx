@@ -1,7 +1,7 @@
 import Error from 'next/error';
-import Head from 'next/head';
 import Link from 'next/link';
 import React from 'react';
+import PageWrapperWithoutMetadata from '../components/private/PageWrapperWithoutMetadata';
 
 class MyError extends Error {
   render = (): JSX.Element => {
@@ -46,14 +46,10 @@ class MyError extends Error {
     }
 
     return (
-      <>
-        <Head>
-          <title>{title}</title>
-          <meta name="robots" content="noindex" />
-        </Head>
+      <PageWrapperWithoutMetadata title={title}>
         <h1>{header}</h1>
         <p>{paragraph}</p>
-      </>
+      </PageWrapperWithoutMetadata>
     );
   };
 }
