@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
-import GlobalStyles from '../src/GlobalStyles';
+import GlobalStyles from '../components/private/GlobalStyles';
 
 const cardBreakpoint = '520px';
 const lightGrey = '#eee';
