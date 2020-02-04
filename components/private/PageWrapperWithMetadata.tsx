@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import React, { FC, PropsWithChildren } from 'react';
 import BasePageWrapper from './BasePageWrapper';
-import GlobalStyles from './GlobalStyles';
 
 interface PageWrapperWithMetadataProps {
   title: string;
