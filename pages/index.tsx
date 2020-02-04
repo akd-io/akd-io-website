@@ -164,8 +164,8 @@ const Index: NextPage = () => (
     <Card>
       <ProfilePictureContainer className="profile-picture-container">
         <ProfilePicture
-          src="static/picture.png"
-          alt="Circular portrait photograph of Anders Kjær Damgaard."
+          src={require('../public/static/picture.png')}
+          alt="Portrait photograph of Anders Kjær Damgaard."
         />
       </ProfilePictureContainer>
       <NameHeader>Anders Kjær Damgaard</NameHeader>
