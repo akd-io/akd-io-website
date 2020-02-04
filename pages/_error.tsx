@@ -3,6 +3,7 @@ import Error from 'next/error';
 import Link from 'next/link';
 import React from 'react';
 import PageWrapperWithoutMetadata from '../components/private/PageWrapperWithoutMetadata';
+import UnstyledA from '../components/public/UnstyledA';
 
 const ErrorContainer = styled.main`
   min-height: 100vh;
@@ -24,6 +25,10 @@ const P = styled.p`
   margin-bottom: 10px;
 `;
 
+const A = styled(UnstyledA)`
+  text-decoration: underline;
+`;
+
 class MyError extends Error {
   render = (): JSX.Element => {
     //    const { statusCode } = this.props;
@@ -34,15 +39,15 @@ class MyError extends Error {
     let backToFrontPageParagraph = (
       <P>
         Back to the{' '}
-        <Link href="/">
-          <a>front page</a>
+        <Link href="/" passHref>
+          <A>front page</A>
         </Link>
         ?
       </P>
     );
     let tryAgainParagraph = (
       <P>
-        Please try again later, or <a href="mailto:akd@akd.io">contact me</a> if the error persists.
+        Please try again later, or <A href="mailto:akd@akd.io">contact me</A> if the error persists.
       </P>
     );
     let paragraph = (
