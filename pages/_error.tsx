@@ -34,7 +34,7 @@ class MyError extends Error {
     const { statusCode } = this.props;
 
     let title = 'Error';
-    let header = <H1>An error occured</H1>;
+    let header = <H1>An error occured ({statusCode})</H1>;
     let backToFrontPageParagraph = (
       <P>
         Back to the{' '}
