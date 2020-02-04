@@ -4,12 +4,17 @@ import React, { FC } from 'react';
 const GlobalStyles: FC = () => (
   <Global
     styles={css`
+      * {
+        box-sizing: border-box;
+      }
+
       body {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif,
           'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+        word-break: break-word;
       }
     `}
-  ></Global>
+  />
 );
 
 export default GlobalStyles;

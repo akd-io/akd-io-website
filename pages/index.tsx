@@ -24,7 +24,6 @@ const IndexContainer = styled.div`
 `;
 
 const Card = styled.div`
-  box-sizing: border-box;
   width: 100%;
   min-height: 100vh;
   display: flex;
