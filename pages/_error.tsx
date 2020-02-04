@@ -30,6 +30,7 @@ class MyError extends Error {
         {backToFrontPageParagraph}
       </>
     );
+
     switch (statusCode) {
       case 404: {
         title = 'Page not found';
@@ -43,6 +44,7 @@ class MyError extends Error {
         break;
       }
     }
+
     return (
       <>
         <Head>
