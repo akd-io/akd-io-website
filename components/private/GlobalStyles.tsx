@@ -1,8 +1,7 @@
 import { css, Global } from '@emotion/core';
-import { NextComponentType } from 'next';
-import React from 'react';
+import React, { FC } from 'react';
 
-const GlobalStyles: NextComponentType = () => (
+const GlobalStyles: FC = () => (
   <Global
     styles={css`
       body {
