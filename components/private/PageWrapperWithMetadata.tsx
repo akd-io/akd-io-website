@@ -22,7 +22,6 @@ const PageWrapperWithMetadata: FC<PropsWithChildren<PageWrapperWithMetadataProps
       <link rel="icon" type="image/png" sizes="32x32" href="/static/favicons/favicon-32x32.png" />
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <meta name="robots" content="index,follow" />
     </Head>
     <GlobalStyles />
     {children}
