@@ -40,7 +40,6 @@
     "@typescript-eslint/parser": "^2.18.0",
     "eslint": "^6.8.0",
     "eslint-plugin-react": "^7.18.0",
-    "favicons": "^5.5.0",
     "typescript": "^3.7.5"
   }
 }
