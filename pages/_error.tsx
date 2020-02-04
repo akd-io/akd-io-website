@@ -9,30 +9,32 @@ class MyError extends Error {
 
     let title = 'Error';
     let header = 'An error occured';
-    let paragraph = (
+    let backToFrontPageParagraph = (
       <>
-        Please try again later, or <a href="mailto:akd@akd.io">contact me</a> if the error persists.
-        <br />
         Back to the{' '}
-        <Link href="https://akd.io">
+        <Link href="/">
           <a>front page</a>
         </Link>
         ?
+      </>
+    );
+    let tryAgainParagraph = (
+      <>
+        Please try again later, or <a href="mailto:akd@akd.io">contact me</a> if the error persists.
+      </>
+    );
+    let paragraph = (
+      <>
+        {tryAgainParagraph}
+        <br />
+        {backToFrontPageParagraph}
       </>
     );
     switch (statusCode) {
       case 404: {
         title = 'Page not found';
         header = 'Page not found';
-        paragraph = (
-          <>
-            Back to the{' '}
-            <Link href="https://akd.io">
-              <a>front page</a>
-            </Link>
-            ?
-          </>
-        );
+        paragraph = backToFrontPageParagraph;
         break;
       }
       case 500: {
