@@ -16,9 +16,6 @@ module.exports = withPlugins([
         Read more at https://github.com/cyrilwanner/next-optimized-images/issues/120
         */
       },
-      webp: {
-        quality: 90,
-      },
     },
   ],
 ]);
