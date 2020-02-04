@@ -1,9 +1,8 @@
 import { css, Global } from '@emotion/core';
 import styled from '@emotion/styled';
 import { NextPage } from 'next';
-import Head from 'next/head';
 import React from 'react';
-import GlobalStyles from '../components/private/GlobalStyles';
+import PageWrapperWithMetadata from '../components/private/PageWrapperWithMetadata';
 
 const cardBreakpoint = '520px';
 const lightGrey = '#eee';
@@ -135,24 +134,11 @@ const Button = styled.a`
 `;
 
 const Index: NextPage = () => (
-  <>
-    <Head>
-      <title>Anders Kjær Damgaard</title>
-      <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-      <link rel="shortcut icon" href="/static/favicons/favicon.ico" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/static/favicons/favicon-16x16.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/static/favicons/favicon-32x32.png" />
-      <meta
-        name="description"
-        content="The website of Anders Kjær Damgaard, a Software Developer based in Copenhagen."
-      />
-      <meta
-        name="keywords"
-        content="Anders Kjær Damgaard,frontend,web,software,developer,development"
-      />
-      <meta name="robots" content="index,follow" />
-    </Head>
-    <GlobalStyles />
+  <PageWrapperWithMetadata
+    title="Anders Kjær Damgaard"
+    description="The website of Anders Kjær Damgaard, a Software Developer based in Copenhagen."
+    keywords="Anders Kjær Damgaard,frontend,web,software,developer,development"
+  >
     <Global styles={globalStyles} />
     <IndexContainer>
       <Card>
@@ -177,7 +163,7 @@ const Index: NextPage = () => (
         </div>
       </Card>
     </IndexContainer>
-  </>
+  </PageWrapperWithMetadata>
 );
 
 export default Index;
