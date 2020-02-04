@@ -3,33 +3,25 @@ import styled from '@emotion/styled';
 import { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
+import GlobalStyles from '../src/GlobalStyles';
 
 const cardBreakpoint = '520px';
 const lightGrey = '#eee';
 const darkGrey = '#111';
 
 const globalStyles = css`
-  html,
-  body,
-  div#__next {
-    min-height: 100vh;
-  }
-
   body {
-    background: white;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif,
-      'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-
     @media only screen and (min-width: ${cardBreakpoint}) {
       background: ${lightGrey};
     }
   }
+`;
 
-  div#__next {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+const IndexContainer = styled.div`
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Card = styled.div`
@@ -160,28 +152,31 @@ const Index: NextPage = () => (
       />
       <meta name="robots" content="index,follow" />
     </Head>
+    <GlobalStyles />
     <Global styles={globalStyles} />
-    <Card>
-      <ProfilePictureContainer className="profile-picture-container">
-        <ProfilePicture
-          src={require('../public/static/picture.png')}
-          alt="Portrait photograph of Anders Kjær Damgaard."
-        />
-      </ProfilePictureContainer>
-      <NameHeader>Anders Kjær Damgaard</NameHeader>
-      <PositionHeader>Software Developer</PositionHeader>
-      <LocationHeader>Copenhagen, Denmark</LocationHeader>
-      <Description>
-        Software development and computer science is an old, long-lasting passion of mine. A passion
-        that my curiosity has always led me to, and one that I am currently enjoying, doing frontend
-        development using modern web technologies.
-      </Description>
-      <div>
-        <Button href="https://www.linkedin.com/in/anders-damgaard/">LinkedIn</Button>
-        <Button href="https://github.com/akd-io">GitHub</Button>
-        <Button href="mailto:akd@akd.io">Email</Button>
-      </div>
-    </Card>
+    <IndexContainer>
+      <Card>
+        <ProfilePictureContainer className="profile-picture-container">
+          <ProfilePicture
+            src={require('../public/static/picture.png')}
+            alt="Portrait photograph of Anders Kjær Damgaard."
+          />
+        </ProfilePictureContainer>
+        <NameHeader>Anders Kjær Damgaard</NameHeader>
+        <PositionHeader>Software Developer</PositionHeader>
+        <LocationHeader>Copenhagen, Denmark</LocationHeader>
+        <Description>
+          Software development and computer science is an old, long-lasting passion of mine. A
+          passion that my curiosity has always led me to, and one that I am currently enjoying,
+          doing frontend development using modern web technologies.
+        </Description>
+        <div>
+          <Button href="https://www.linkedin.com/in/anders-damgaard/">LinkedIn</Button>
+          <Button href="https://github.com/akd-io">GitHub</Button>
+          <Button href="mailto:akd@akd.io">Email</Button>
+        </div>
+      </Card>
+    </IndexContainer>
   </>
 );
 
