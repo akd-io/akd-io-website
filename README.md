@@ -4,8 +4,9 @@ This is the repository for the website of Anders Kjær Damgaard at [akd.io](http
 
 ## Setup
 
-1. Run `npm i -g yarn` - Install the Yarn package manager globally.
-2. Run `yarn` - Install dependencies.
+1. Make sure you have [Node.js](https://nodejs.org/) installed.
+2. Run `npm i -g yarn` - Install the Yarn package manager globally.
+3. Run `yarn` - Install dependencies.
 
 ## Development
 
@@ -19,7 +20,7 @@ This is the repository for the website of Anders Kjær Damgaard at [akd.io](http
 
 ## Deployment
 
-The repository integrates with the [ZEIT Now for GitHub](https://zeit.co/github) integration to deliver continuous deployments from pull requests.
+The repository integrates with the [Vercel for GitHub](https://vercel.com/github) integration to deliver continuous deployments from pull requests.
 
 ## Contribution
 
