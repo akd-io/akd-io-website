@@ -156,8 +156,9 @@ const Index: NextPage = () => (
           doing frontend development using modern web technologies.
         </Description>
         <div>
-          <Button href="https://www.linkedin.com/in/anders-damgaard/">LinkedIn</Button>
+          <Button href="https://twitter.com/akd_io">Twitter</Button>
           <Button href="https://github.com/akd-io">GitHub</Button>
+          <Button href="https://www.linkedin.com/in/anders-damgaard/">LinkedIn</Button>
           <Button href="mailto:akd@akd.io">Email</Button>
         </div>
       </Card>
