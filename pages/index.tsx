@@ -26,16 +26,17 @@ const IndexContainer = styled.div`
 const Card = styled.div`
   width: 100%;
   min-height: 100vh;
+  padding: 40px;
+  border-radius: 20px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   text-align: center;
   background: white;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  padding-right: 40px;
-  padding-left: 40px;
+
   animation-name: fadein;
   animation-duration: 1s;
   animation-fill-mode: forwards;
