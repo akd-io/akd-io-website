@@ -5,8 +5,7 @@ import React from 'react';
 import PageWrapperWithMetadata from '../components/private/PageWrapperWithMetadata';
 
 const cardBreakpoint = '520px';
-const lightGrey = '#eee';
-const darkGrey = '#111';
+const lightGrey = '#f7f7f7';
 
 const globalStyles = css`
   body {
@@ -25,17 +24,16 @@ const IndexContainer = styled.div`
 
 const Card = styled.div`
   width: 100%;
-  min-height: 100vh;
+  max-width: 440px;
+  padding: 40px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   text-align: center;
-  background: white;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  padding-right: 40px;
-  padding-left: 40px;
+
   animation-name: fadein;
   animation-duration: 1s;
   animation-fill-mode: forwards;
@@ -43,19 +41,12 @@ const Card = styled.div`
   @keyframes fadein {
     0% {
       opacity: 0;
-      transform: translateY(50px);
+      transform: translateY(30px);
     }
     100% {
       opacity: 1;
       transform: translateY(0);
     }
-  }
-
-  @media only screen and (min-width: ${cardBreakpoint}) {
-    min-height: 0;
-    max-width: 440px;
-    margin: 40px;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
   }
 
   & > * + * {
@@ -68,8 +59,6 @@ const ProfilePictureContainer = styled.div`
   position: relative;
   width: 65%;
   padding-bottom: 65%;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.1);
 `;
 
 const ProfilePicture = styled.img`
@@ -78,6 +67,8 @@ const ProfilePicture = styled.img`
   left: 0;
   width: 100%;
   height: 100%;
+
+  border-radius: 50%;
 `;
 
 const NameHeader = styled.h1`
@@ -85,13 +76,13 @@ const NameHeader = styled.h1`
   font-weight: 700;
 `;
 
-const PositionHeader = styled.h2`
+const PositionHeader = styled.span`
   margin-bottom: 0;
   font-size: 25px;
   font-weight: 300;
 `;
 
-const LocationHeader = styled.h3`
+const LocationHeader = styled.span`
   margin-top: 0;
   font-size: 20px;
   font-weight: 300;
@@ -99,24 +90,38 @@ const LocationHeader = styled.h3`
 
 const Description = styled.p`
   font-size: 16px;
-  line-height: 1.25em;
+  line-height: 1.4em;
+`;
+
+const FollowMeHeader = styled.h2`
+  margin-top: 40px;
+  font-size: 20px;
+  font-weight: 400px;
+`;
+
+const ButtonsContainer = styled.div`
+  margin-top: 10px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 `;
 
 const Button = styled.a`
+  transform: scale(0.95);
+
+  margin: 0.5em;
+  border-radius: 0.5em;
+  padding: 0.75em 1em;
+
   display: inline-block;
-  padding-top: 0.75em;
-  padding-bottom: 0.75em;
-  padding-left: 1em;
-  padding-right: 1em;
-  margin-top: 1em;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
-  border: 1px solid ${darkGrey};
-  border-radius: 0.3em;
-  background: ${darkGrey};
-  color: white;
+  background: white;
+  color: black;
   text-decoration: none;
-  transition: color 0.1s, background-color 0.1s;
+
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+
+  transition: transform 0.15s, box-shadow 0.15s;
 
   &:link,
   &:visited,
@@ -127,15 +132,15 @@ const Button = styled.a`
 
   &:hover,
   &:active {
-    background: white;
-    color: black;
+    transform: scale(1);
+    box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.1);
   }
 `;
 
 const Index: NextPage = () => (
   <PageWrapperWithMetadata
     title="Anders Kjær Damgaard"
-    description="The website of Anders Kjær Damgaard, a Software Developer based in Copenhagen."
+    description="The website of Anders Kjær Damgaard, a Software Developer based in Copenhagen doing frontend development using modern web technologies."
     keywords="Anders Kjær Damgaard,frontend,web,software,developer,development"
   >
     <Global styles={globalStyles} />
@@ -155,11 +160,12 @@ const Index: NextPage = () => (
           passion that my curiosity has always led me to, and one that I am currently enjoying,
           doing frontend development using modern web technologies.
         </Description>
-        <div>
-          <Button href="https://www.linkedin.com/in/anders-damgaard/">LinkedIn</Button>
+        <FollowMeHeader>Follow me online:</FollowMeHeader>
+        <ButtonsContainer>
+          <Button href="https://twitter.com/akd_io">Twitter</Button>
           <Button href="https://github.com/akd-io">GitHub</Button>
-          <Button href="mailto:akd@akd.io">Email</Button>
-        </div>
+          <Button href="https://www.linkedin.com/in/anders-damgaard/">LinkedIn</Button>
+        </ButtonsContainer>
       </Card>
     </IndexContainer>
   </PageWrapperWithMetadata>
