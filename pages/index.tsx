@@ -136,7 +136,7 @@ const Button = styled.a`
 const Index: NextPage = () => (
   <PageWrapperWithMetadata
     title="Anders Kjær Damgaard"
-    description="The website of Anders Kjær Damgaard, a Software Developer based in Copenhagen."
+    description="The website of Anders Kjær Damgaard, a Software Developer based in Copenhagen doing frontend development using modern web technologies."
     keywords="Anders Kjær Damgaard,frontend,web,software,developer,development"
   >
     <Global styles={globalStyles} />
