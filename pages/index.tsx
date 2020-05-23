@@ -5,7 +5,7 @@ import React from 'react';
 import PageWrapperWithMetadata from '../components/private/PageWrapperWithMetadata';
 
 const cardBreakpoint = '520px';
-const lightGrey = '#eee';
+const lightGrey = '#f7f7f7';
 const darkGrey = '#111';
 
 const globalStyles = css`
