@@ -161,7 +161,6 @@ const Index: NextPage = () => (
           <Button href="https://github.com/akd-io">GitHub</Button>
           <br />
           <Button href="https://www.linkedin.com/in/anders-damgaard/">LinkedIn</Button>
-          <Button href="mailto:akd@akd.io">Email</Button>
         </div>
       </Card>
     </IndexContainer>
