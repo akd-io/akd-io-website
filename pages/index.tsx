@@ -160,7 +160,7 @@ const Index: NextPage = () => (
           passion that my curiosity has always led me to, and one that I am currently enjoying,
           doing frontend development using modern web technologies.
         </Description>
-        <FollowMeHeader>Follow me online:</FollowMeHeader>
+        <FollowMeHeader>Follow me online</FollowMeHeader>
         <ButtonsContainer>
           <Button href="https://twitter.com/akd_io">Twitter</Button>
           <Button href="https://github.com/akd-io">GitHub</Button>
