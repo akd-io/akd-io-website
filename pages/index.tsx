@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { NextPage } from 'next';
 import React from 'react';
 import PageWrapperWithMetadata from '../components/private/PageWrapperWithMetadata';
+import Button from '../components/public/Button';
 
 const IndexContainer = styled.div`
   min-height: 100vh;
@@ -93,36 +94,6 @@ const ButtonsContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-`;
-
-const Button = styled.a`
-  transform: scale(0.95);
-
-  margin: 0.5em;
-  border-radius: 0.5em;
-  padding: 0.75em 1em;
-
-  display: inline-block;
-  background: white;
-  color: black;
-  text-decoration: none;
-
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-
-  transition: transform 0.15s, box-shadow 0.15s;
-
-  &:link,
-  &:visited,
-  &:hover,
-  &:active {
-    text-decoration: none;
-  }
-
-  &:hover,
-  &:active {
-    transform: scale(1);
-    box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.1);
-  }
 `;
 
 const Index: NextPage = () => (
