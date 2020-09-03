@@ -4,14 +4,11 @@ import { NextPage } from 'next';
 import React from 'react';
 import PageWrapperWithMetadata from '../components/private/PageWrapperWithMetadata';
 
-const cardBreakpoint = '520px';
 const lightGrey = '#f7f7f7';
 
-const globalStyles = css`
+const bodyStyles = css`
   body {
-    @media only screen and (min-width: ${cardBreakpoint}) {
-      background: ${lightGrey};
-    }
+    background: ${lightGrey};
   }
 `;
 
@@ -143,7 +140,7 @@ const Index: NextPage = () => (
     description="The website of Anders Kjær Damgaard, a Software Developer based in Copenhagen doing frontend development using modern web technologies."
     keywords="Anders Kjær Damgaard,frontend,web,software,developer,development"
   >
-    <Global styles={globalStyles} />
+    <Global styles={bodyStyles} />
     <IndexContainer>
       <Card>
         <ProfilePictureContainer className="profile-picture-container">
