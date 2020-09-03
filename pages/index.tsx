@@ -98,7 +98,7 @@ const ButtonsContainer = styled.div`
 
 const Index: NextPage = () => (
   <PageWrapperWithMetadata
-    title="Anders Kjær Damgaard"
+    title="Anders Kjær Damgaard | akd.io"
     description="The website of Anders Kjær Damgaard, a Software Developer based in Copenhagen doing frontend development using modern web technologies."
     keywords="Anders Kjær Damgaard,frontend,web,software,developer,development"
   >
