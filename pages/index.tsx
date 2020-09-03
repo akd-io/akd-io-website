@@ -1,16 +1,7 @@
-import { css, Global } from '@emotion/core';
 import styled from '@emotion/styled';
 import { NextPage } from 'next';
 import React from 'react';
 import PageWrapperWithMetadata from '../components/private/PageWrapperWithMetadata';
-
-const lightGrey = '#f7f7f7';
-
-const bodyStyles = css`
-  body {
-    background: ${lightGrey};
-  }
-`;
 
 const IndexContainer = styled.div`
   min-height: 100vh;
@@ -140,7 +131,6 @@ const Index: NextPage = () => (
     description="The website of Anders Kjær Damgaard, a Software Developer based in Copenhagen doing frontend development using modern web technologies."
     keywords="Anders Kjær Damgaard,frontend,web,software,developer,development"
   >
-    <Global styles={bodyStyles} />
     <IndexContainer>
       <Card>
         <ProfilePictureContainer className="profile-picture-container">
