@@ -12,7 +12,7 @@ import {
 
 const PageContainer = styled.main`
   max-width: 800px;
-  margin: 20px;
+  margin: 50px 20px;
 
   line-height: 1.33em;
 `;
@@ -34,6 +34,11 @@ const TableHeader = styled.div`
   color: rgba(0, 0, 0, 0.5);
 `;
 
+const H2 = styled.h2`
+  margin-top: 1.5em;
+  margin-bottom: 0.33em;
+`;
+
 const CV: NextPage = () => {
   return (
     <PageWrapperWithMetadata
@@ -43,7 +48,7 @@ const CV: NextPage = () => {
     >
       <PageContainer>
         <h1>CV &ndash; Anders Kjær Damgaard</h1>
-        <h2>Occupation</h2>
+        <H2>Occupation</H2>
         <ThreeColumnGrid>
           <TableHeader>PERIOD</TableHeader>
           <TableHeader>COMPANY</TableHeader>
@@ -58,7 +63,7 @@ const CV: NextPage = () => {
             </>
           ))}
         </ThreeColumnGrid>
-        <h2>Education</h2>
+        <H2>Education</H2>
         <ThreeColumnGrid>
           <TableHeader>PERIOD</TableHeader>
           <TableHeader>EDUCATION</TableHeader>
@@ -73,7 +78,7 @@ const CV: NextPage = () => {
             </>
           ))}
         </ThreeColumnGrid>
-        <h2>Certificates</h2>
+        <H2>Certificates</H2>
         <ThreeColumnGrid>
           <TableHeader>YEAR</TableHeader>
           <TableHeader>COURSE NAME</TableHeader>
@@ -86,7 +91,7 @@ const CV: NextPage = () => {
             </>
           ))}
         </ThreeColumnGrid>
-        <h2>Personal qualifications</h2>
+        <H2>Personal qualifications</H2>
         <ul>
           <TwoColumnLayout>
             {personalQualifications.map((qualification, i) => (
@@ -94,7 +99,7 @@ const CV: NextPage = () => {
             ))}
           </TwoColumnLayout>
         </ul>
-        <h2>Competencies</h2>
+        <H2>Competencies</H2>
         <ul>
           <TwoColumnLayout>
             {competencies.map((competence, i) => (
