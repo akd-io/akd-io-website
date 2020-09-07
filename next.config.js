@@ -2,7 +2,7 @@ const withPlugins = require('next-compose-plugins');
 const nextOptimizedImages = require('next-optimized-images');
 const nextTranspileModules = require('next-transpile-modules');
 
-const withTM = nextTranspileModules(['drei', 'three', 'postprocessing']);
+const withTM = nextTranspileModules(['drei', 'three']);
 
 module.exports = withPlugins([
   withTM,
