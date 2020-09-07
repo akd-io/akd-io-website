@@ -1,19 +1,8 @@
-import { css, Global } from '@emotion/core';
 import styled from '@emotion/styled';
 import { NextPage } from 'next';
 import React from 'react';
 import PageWrapperWithMetadata from '../components/private/PageWrapperWithMetadata';
-
-const cardBreakpoint = '520px';
-const lightGrey = '#f7f7f7';
-
-const globalStyles = css`
-  body {
-    @media only screen and (min-width: ${cardBreakpoint}) {
-      background: ${lightGrey};
-    }
-  }
-`;
+import Button from '../components/public/Button';
 
 const IndexContainer = styled.div`
   min-height: 100vh;
@@ -107,43 +96,12 @@ const ButtonsContainer = styled.div`
   justify-content: center;
 `;
 
-const Button = styled.a`
-  transform: scale(0.95);
-
-  margin: 0.5em;
-  border-radius: 0.5em;
-  padding: 0.75em 1em;
-
-  display: inline-block;
-  background: white;
-  color: black;
-  text-decoration: none;
-
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-
-  transition: transform 0.15s, box-shadow 0.15s;
-
-  &:link,
-  &:visited,
-  &:hover,
-  &:active {
-    text-decoration: none;
-  }
-
-  &:hover,
-  &:active {
-    transform: scale(1);
-    box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.1);
-  }
-`;
-
 const Index: NextPage = () => (
   <PageWrapperWithMetadata
-    title="Anders Kjær Damgaard"
+    title="Anders Kjær Damgaard | akd.io"
     description="The website of Anders Kjær Damgaard, a Software Developer based in Copenhagen doing frontend development using modern web technologies."
     keywords="Anders Kjær Damgaard,frontend,web,software,developer,development"
   >
-    <Global styles={globalStyles} />
     <IndexContainer>
       <Card>
         <ProfilePictureContainer className="profile-picture-container">
