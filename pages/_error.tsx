@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import Error from 'next/error';
+import { NextPage } from 'next';
 import Link from 'next/link';
 import React from 'react';
 import PageWrapperWithoutMetadata from '../components/private/PageWrapperWithoutMetadata';
@@ -29,56 +29,41 @@ const A = styled(UnstyledA)`
   text-decoration: underline;
 `;
 
-class MyError extends Error {
-  render = (): JSX.Element => {
-    const { statusCode } = this.props;
+type ErrorProps = {
+  statusCode?: number;
+};
+const Error: NextPage<ErrorProps> = ({ statusCode }) => {
+  return (
+    <PageWrapperWithoutMetadata title="Internal server error">
+      <ErrorContainer>
+        {statusCode === 500 ? (
+          <>
+            <H1>Internal server error</H1>
+            <P>
+              Please try again later, or <A href="mailto:akd@akd.io">contact me</A> if the error
+              persists.
+            </P>
+          </>
+        ) : statusCode ? (
+          <H1>An error occured ({statusCode})</H1>
+        ) : (
+          <H1>An error occured</H1>
+        )}
+        <P>
+          Back to the{' '}
+          <Link href="/" passHref>
+            <A>front page</A>
+          </Link>
+          .
+        </P>
+      </ErrorContainer>
+    </PageWrapperWithoutMetadata>
+  );
+};
 
-    let title = 'Error';
-    let header = <H1>An error occured ({statusCode})</H1>;
-    let backToFrontPageParagraph = (
-      <P>
-        Back to the{' '}
-        <Link href="/" passHref>
-          <A>front page</A>
-        </Link>
-        ?
-      </P>
-    );
-    let tryAgainParagraph = (
-      <P>
-        Please try again later, or <A href="mailto:akd@akd.io">contact me</A> if the error persists.
-      </P>
-    );
-    let paragraph = (
-      <>
-        {tryAgainParagraph}
-        {backToFrontPageParagraph}
-      </>
-    );
+Error.getInitialProps = ({ res, err }): ErrorProps => {
+  const statusCode = res ? res.statusCode : err ? err.statusCode : 404;
+  return { statusCode };
+};
 
-    switch (statusCode) {
-      case 404: {
-        title = 'Page not found';
-        header = <H1>Page not found</H1>;
-        paragraph = backToFrontPageParagraph;
-        break;
-      }
-      case 500: {
-        title = 'Internal server error';
-        header = <H1>Internal server error</H1>;
-        break;
-      }
-    }
-
-    return (
-      <PageWrapperWithoutMetadata title={title}>
-        <ErrorContainer>
-          {header}
-          {paragraph}
-        </ErrorContainer>
-      </PageWrapperWithoutMetadata>
-    );
-  };
-}
-
-export default MyError;
+export default Error;
