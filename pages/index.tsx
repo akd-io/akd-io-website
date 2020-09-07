@@ -1,17 +1,26 @@
 import styled from '@emotion/styled';
 import { NextPage } from 'next';
 import React from 'react';
+import Background from '../components/private/Background';
 import PageWrapperWithMetadata from '../components/private/PageWrapperWithMetadata';
 import Button from '../components/public/Button';
 
 const IndexContainer = styled.div`
+  position: relative;
   min-height: 100vh;
+  min-width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 
-const Card = styled.div`
+const BackgroundContainer = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+`;
+
+const Card = styled.main`
   width: 100%;
   max-width: 440px;
   padding: 40px;
@@ -103,6 +112,9 @@ const Index: NextPage = () => (
     keywords="Anders Kjær Damgaard,frontend,web,software,developer,development"
   >
     <IndexContainer>
+      <BackgroundContainer>
+        <Background />
+      </BackgroundContainer>
       <Card>
         <ProfilePictureContainer className="profile-picture-container">
           <ProfilePicture
