@@ -3,6 +3,7 @@ import { NextPage } from 'next';
 import React from 'react';
 import PageWrapperWithMetadata from '../components/private/PageWrapperWithMetadata';
 import Button from '../components/public/Button';
+import { owl } from '../utils/owl';
 
 const IndexContainer = styled.div`
   min-height: 100vh;
@@ -13,7 +14,7 @@ const IndexContainer = styled.div`
 
 const Card = styled.div`
   width: 100%;
-  max-width: 440px;
+  max-width: 600px;
   padding: 40px;
 
   display: flex;
@@ -38,8 +39,7 @@ const Card = styled.div`
     }
   }
 
-  & > * + * {
-    margin: 0;
+  > ${owl} {
     margin-top: 25px;
   }
 `;
@@ -60,32 +60,53 @@ const ProfilePicture = styled.img`
   border-radius: 50%;
 `;
 
-const NameHeader = styled.h1`
+const NameHeading = styled.h1`
   font-size: 30px;
   font-weight: 700;
 `;
 
-const PositionHeader = styled.span`
+const JobTitle = styled.span`
   margin-bottom: 0;
   font-size: 25px;
   font-weight: 300;
 `;
 
-const LocationHeader = styled.span`
+const Location = styled.span`
   margin-top: 0;
   font-size: 20px;
   font-weight: 300;
 `;
 
-const Description = styled.p`
+const Section = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const ParagraphSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > ${owl} {
+    margin-top: 20px;
+  }
+`;
+
+const Paragraph = styled.p`
+  margin: 0;
   font-size: 16px;
   line-height: 1.4em;
 `;
 
-const FollowMeHeader = styled.h2`
-  margin-top: 40px;
+const A = styled.a`
+  color: black;
+`;
+
+const FollowMeHeading = styled.h2`
+  margin: 0;
   font-size: 20px;
-  font-weight: 400px;
+  font-weight: bold;
 `;
 
 const ButtonsContainer = styled.div`
@@ -104,26 +125,43 @@ const Index: NextPage = () => (
   >
     <IndexContainer>
       <Card>
-        <ProfilePictureContainer className="profile-picture-container">
-          <ProfilePicture
-            src="/static/picture.png"
-            alt="Portrait photograph of Anders Kjær Damgaard."
-          />
-        </ProfilePictureContainer>
-        <NameHeader>Anders Kjær Damgaard</NameHeader>
-        <PositionHeader>Software Developer</PositionHeader>
-        <LocationHeader>Copenhagen, Denmark</LocationHeader>
-        <Description>
-          Software development and computer science is an old, long-lasting passion of mine. A
-          passion that my curiosity has always led me to, and one that I am currently enjoying,
-          doing frontend development using modern web technologies.
-        </Description>
-        <FollowMeHeader>Follow me online</FollowMeHeader>
-        <ButtonsContainer>
-          <Button href="https://twitter.com/akd_io">Twitter</Button>
-          <Button href="https://github.com/akd-io">GitHub</Button>
-          <Button href="https://www.linkedin.com/in/anders-damgaard/">LinkedIn</Button>
-        </ButtonsContainer>
+        <Section>
+          <ProfilePictureContainer>
+            <ProfilePicture
+              src="/static/picture.png"
+              alt="Portrait photograph of Anders Kjær Damgaard."
+            />
+          </ProfilePictureContainer>
+          <NameHeading>Anders Kjær Damgaard</NameHeading>
+          <JobTitle>Freelance Frontend Engineer</JobTitle>
+          <Location>Copenhagen, Denmark</Location>
+        </Section>
+        <ParagraphSection>
+          <Paragraph>
+            Hi! My name is Anders, and I am a passionate frontend engineer currently obsessed with
+            Next.js, TypeScript, GraphQL and Serverless.
+          </Paragraph>
+          <Paragraph>
+            I have spent the last 3 years employed at IT Minds and later Trifork, consulting as a
+            frontend web developer on a dozen different projects for a dozen different companies. I
+            have worked with many different teams, technologies and processes, and absolutely love
+            the large amount of learning opportunities the ever-changing environment has to offer.
+          </Paragraph>
+          <Paragraph>
+            I have recently taken the final step and become an independent consultant. If you are
+            looking for someone strong in React, Redux, TypeScript, JavaScript, HTML, CSS,
+            CSS-in-JS, etc., then check out my CV and shoot me a message on{' '}
+            <A href="https://www.linkedin.com/in/anders-damgaard/">LinkedIn</A>!
+          </Paragraph>
+        </ParagraphSection>
+        <Section>
+          <FollowMeHeading>Follow me online</FollowMeHeading>
+          <ButtonsContainer>
+            <Button href="https://twitter.com/akd_io">Twitter</Button>
+            <Button href="https://github.com/akd-io">GitHub</Button>
+            <Button href="https://www.linkedin.com/in/anders-damgaard/">LinkedIn</Button>
+          </ButtonsContainer>
+        </Section>
       </Card>
     </IndexContainer>
   </PageWrapperWithMetadata>
