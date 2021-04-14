@@ -116,6 +116,7 @@ const ButtonsContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
 `;
 
 const Index: NextPage = () => (
