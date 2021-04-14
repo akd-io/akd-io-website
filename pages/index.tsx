@@ -36,10 +36,28 @@ const Card = styled.div`
       transform: translateY(0);
     }
   }
+`;
 
+const Section = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const HeaderSection = styled(Section)`
+  text-align: center;
+`;
+
+const ParagraphSection = styled(Section)`
+  margin-top: 40px;
   > ${owl} {
-    margin-top: 25px;
+    margin-top: 20px;
   }
+`;
+
+const FollowMeSection = styled(Section)`
+  margin-top: 40px;
+  text-align: center;
 `;
 
 const ProfilePictureContainer = styled.div`
@@ -61,36 +79,18 @@ const ProfilePicture = styled.img`
 const NameHeading = styled.h1`
   font-size: 30px;
   font-weight: 700;
-  text-align: center;
 `;
 
 const JobTitle = styled.span`
   margin-bottom: 0;
   font-size: 25px;
   font-weight: 300;
-  text-align: center;
 `;
 
 const Location = styled.span`
   margin-top: 0;
   font-size: 20px;
   font-weight: 300;
-  text-align: center;
-`;
-
-const Section = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-const ParagraphSection = styled.section`
-  display: flex;
-  flex-direction: column;
-
-  > ${owl} {
-    margin-top: 20px;
-  }
 `;
 
 const Paragraph = styled.p`
@@ -107,7 +107,6 @@ const FollowMeHeading = styled.h2`
   margin: 0;
   font-size: 20px;
   font-weight: bold;
-  text-align: center;
 `;
 
 const ButtonsContainer = styled.div`
@@ -127,7 +126,7 @@ const Index: NextPage = () => (
   >
     <IndexContainer>
       <Card>
-        <Section>
+        <HeaderSection>
           <ProfilePictureContainer>
             <ProfilePicture
               src="/static/picture.png"
@@ -137,7 +136,7 @@ const Index: NextPage = () => (
           <NameHeading>Anders Kjær Damgaard</NameHeading>
           <JobTitle>Freelance Frontend Engineer</JobTitle>
           <Location>Copenhagen, Denmark</Location>
-        </Section>
+        </HeaderSection>
         <ParagraphSection>
           <Paragraph>
             Hi! My name is Anders, and I am a passionate frontend engineer currently obsessed with
@@ -156,14 +155,14 @@ const Index: NextPage = () => (
             <A href="https://www.linkedin.com/in/anders-damgaard/">LinkedIn</A>!
           </Paragraph>
         </ParagraphSection>
-        <Section>
+        <FollowMeSection>
           <FollowMeHeading>Follow me online</FollowMeHeading>
           <ButtonsContainer>
             <Button href="https://twitter.com/akd_io">Twitter</Button>
             <Button href="https://github.com/akd-io">GitHub</Button>
             <Button href="https://www.linkedin.com/in/anders-damgaard/">LinkedIn</Button>
           </ButtonsContainer>
-        </Section>
+        </FollowMeSection>
       </Card>
     </IndexContainer>
   </PageWrapperWithMetadata>
