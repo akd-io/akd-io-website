@@ -22,8 +22,6 @@ const Card = styled.div`
   justify-content: center;
   align-items: center;
 
-  text-align: center;
-
   animation-name: fadein;
   animation-duration: 1s;
   animation-fill-mode: forwards;
@@ -63,18 +61,21 @@ const ProfilePicture = styled.img`
 const NameHeading = styled.h1`
   font-size: 30px;
   font-weight: 700;
+  text-align: center;
 `;
 
 const JobTitle = styled.span`
   margin-bottom: 0;
   font-size: 25px;
   font-weight: 300;
+  text-align: center;
 `;
 
 const Location = styled.span`
   margin-top: 0;
   font-size: 20px;
   font-weight: 300;
+  text-align: center;
 `;
 
 const Section = styled.section`
@@ -86,7 +87,6 @@ const Section = styled.section`
 const ParagraphSection = styled.section`
   display: flex;
   flex-direction: column;
-  align-items: center;
 
   > ${owl} {
     margin-top: 20px;
@@ -107,6 +107,7 @@ const FollowMeHeading = styled.h2`
   margin: 0;
   font-size: 20px;
   font-weight: bold;
+  text-align: center;
 `;
 
 const ButtonsContainer = styled.div`
