@@ -22,8 +22,6 @@ const Card = styled.div`
   justify-content: center;
   align-items: center;
 
-  text-align: center;
-
   animation-name: fadein;
   animation-duration: 1s;
   animation-fill-mode: forwards;
@@ -38,10 +36,28 @@ const Card = styled.div`
       transform: translateY(0);
     }
   }
+`;
 
+const Section = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const HeaderSection = styled(Section)`
+  text-align: center;
+`;
+
+const ParagraphSection = styled(Section)`
+  margin-top: 40px;
   > ${owl} {
-    margin-top: 25px;
+    margin-top: 20px;
   }
+`;
+
+const FollowMeSection = styled(Section)`
+  margin-top: 40px;
+  text-align: center;
 `;
 
 const ProfilePictureContainer = styled.div`
@@ -77,22 +93,6 @@ const Location = styled.span`
   font-weight: 300;
 `;
 
-const Section = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-const ParagraphSection = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  > ${owl} {
-    margin-top: 20px;
-  }
-`;
-
 const Paragraph = styled.p`
   margin: 0;
   font-size: 16px;
@@ -115,6 +115,7 @@ const ButtonsContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
 `;
 
 const Index: NextPage = () => (
@@ -125,7 +126,7 @@ const Index: NextPage = () => (
   >
     <IndexContainer>
       <Card>
-        <Section>
+        <HeaderSection>
           <ProfilePictureContainer>
             <ProfilePicture
               src="/static/picture.png"
@@ -135,7 +136,7 @@ const Index: NextPage = () => (
           <NameHeading>Anders Kjær Damgaard</NameHeading>
           <JobTitle>Freelance Frontend Engineer</JobTitle>
           <Location>Copenhagen, Denmark</Location>
-        </Section>
+        </HeaderSection>
         <ParagraphSection>
           <Paragraph>
             Hi! My name is Anders, and I am a passionate frontend engineer currently obsessed with
@@ -154,14 +155,14 @@ const Index: NextPage = () => (
             <A href="https://www.linkedin.com/in/anders-damgaard/">LinkedIn</A>!
           </Paragraph>
         </ParagraphSection>
-        <Section>
+        <FollowMeSection>
           <FollowMeHeading>Follow me online</FollowMeHeading>
           <ButtonsContainer>
             <Button href="https://twitter.com/akd_io">Twitter</Button>
             <Button href="https://github.com/akd-io">GitHub</Button>
             <Button href="https://www.linkedin.com/in/anders-damgaard/">LinkedIn</Button>
           </ButtonsContainer>
-        </Section>
+        </FollowMeSection>
       </Card>
     </IndexContainer>
   </PageWrapperWithMetadata>
