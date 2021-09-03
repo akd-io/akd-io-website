@@ -1,5 +1,5 @@
 import { css, Global } from '@emotion/react';
-import React, { FC } from 'react';
+import { VFC } from 'react';
 import { lightGrey } from '../../utils/colors';
 
 const globalCss = css`
@@ -18,6 +18,6 @@ const globalCss = css`
   }
 `;
 
-const GlobalStyles: FC = () => <Global styles={globalCss} />;
+const GlobalStyles: VFC = () => <Global styles={globalCss} />;
 
 export default GlobalStyles;

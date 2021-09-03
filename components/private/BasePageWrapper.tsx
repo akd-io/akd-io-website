@@ -1,8 +1,8 @@
 import Head from 'next/head';
-import React, { FC, PropsWithChildren } from 'react';
+import { FC } from 'react';
 import GlobalStyles from './GlobalStyles';
 
-const BasePageWrapper: FC<PropsWithChildren<{}>> = ({ children }) => (
+const BasePageWrapper: FC = ({ children }) => (
   <>
     <Head>
       <link rel="shortcut icon" href="/static/favicons/favicon.ico" />

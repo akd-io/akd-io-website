@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 import { NextPage } from 'next';
 import Link from 'next/link';
-import React from 'react';
 import PageWrapperWithoutMetadata from '../components/private/PageWrapperWithoutMetadata';
 import UnstyledA from '../components/public/UnstyledA';
 
