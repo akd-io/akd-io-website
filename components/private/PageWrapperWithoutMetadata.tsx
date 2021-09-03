@@ -1,14 +1,11 @@
 import Head from 'next/head';
-import React, { FC, PropsWithChildren } from 'react';
+import { FC } from 'react';
 import BasePageWrapper from './BasePageWrapper';
 
 interface PageWrapperWithoutMetadataProps {
   title: string;
 }
-const PageWrapperWithoutMetadata: FC<PropsWithChildren<PageWrapperWithoutMetadataProps>> = ({
-  title,
-  children,
-}) => (
+const PageWrapperWithoutMetadata: FC<PageWrapperWithoutMetadataProps> = ({ title, children }) => (
   <BasePageWrapper>
     <Head>
       <title>{title}</title>

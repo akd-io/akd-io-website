@@ -28,7 +28,7 @@ const A = styled(UnstyledA)`
   text-decoration: underline;
 `;
 
-const Page404: React.FC = () => (
+const Page404: React.VFC = () => (
   <PageWrapperWithoutMetadata title="Page not found">
     <ErrorContainer>
       <H1>Page not found</H1>
