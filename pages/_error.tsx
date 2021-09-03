@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { NextPage } from 'next';
+import { ErrorProps } from 'next/error';
 import Link from 'next/link';
 import PageWrapperWithoutMetadata from '../components/private/PageWrapperWithoutMetadata';
 import UnstyledA from '../components/public/UnstyledA';
@@ -28,10 +29,7 @@ const A = styled(UnstyledA)`
   text-decoration: underline;
 `;
 
-type ErrorProps = {
-  statusCode?: number;
-};
-const Error: NextPage<ErrorProps> = ({ statusCode }) => {
+const CustomError: NextPage<ErrorProps> = ({ statusCode }) => {
   return (
     <PageWrapperWithoutMetadata title="Internal server error">
       <ErrorContainer>
@@ -43,10 +41,8 @@ const Error: NextPage<ErrorProps> = ({ statusCode }) => {
               persists.
             </P>
           </>
-        ) : statusCode ? (
-          <H1>An error occured ({statusCode})</H1>
         ) : (
-          <H1>An error occured</H1>
+          <H1>An error occured ({statusCode})</H1>
         )}
         <P>
           Back to the{' '}
@@ -60,9 +56,14 @@ const Error: NextPage<ErrorProps> = ({ statusCode }) => {
   );
 };
 
-Error.getInitialProps = ({ res, err }): ErrorProps => {
-  const statusCode = res ? res.statusCode : err ? err.statusCode : 404;
+CustomError.getInitialProps = ({ res, err }) => {
+  let statusCode = 404;
+  if (res) {
+    statusCode = res.statusCode;
+  } else if (err && err.statusCode) {
+    statusCode = err.statusCode;
+  }
   return { statusCode };
 };
 
-export default Error;
+export default CustomError;
