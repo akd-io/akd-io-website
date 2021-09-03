@@ -1,7 +1,8 @@
-import { AppType } from 'next/dist/next-server/lib/utils';
+import type { AppProps } from 'next/app';
 import 'normalize.css';
-import React from 'react';
 
-const MyApp: AppType = ({ Component, pageProps }) => <Component {...pageProps} />;
+const CustomApp = ({ Component, pageProps }: AppProps): JSX.Element => {
+  return <Component {...pageProps} />;
+};
 
-export default MyApp;
+export default CustomApp;
