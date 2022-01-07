@@ -4,6 +4,8 @@ import React from 'react';
 import PageWrapperWithMetadata from '../components/private/PageWrapperWithMetadata';
 import Button from '../components/public/Button';
 import { owl } from '../utils/owl';
+import portrait from '../public/images/portrait.jpg';
+import Image from 'next/image';
 
 const IndexContainer = styled.div`
   min-height: 100vh;
@@ -60,13 +62,13 @@ const FollowMeSection = styled(Section)`
   text-align: center;
 `;
 
-const ProfilePictureContainer = styled.div`
+const PortraitContainer = styled.div`
   position: relative;
   width: 65%;
   padding-bottom: 65%;
 `;
 
-const ProfilePicture = styled.img`
+const Portrait = styled(Image)`
   position: absolute;
   top: 0;
   left: 0;
@@ -121,18 +123,19 @@ const ButtonsContainer = styled.div`
 const Index: NextPage = () => (
   <PageWrapperWithMetadata
     title="Anders Kjær Damgaard | akd.io"
-    description="The website of Anders Kjær Damgaard, a Software Developer based in Copenhagen doing frontend development using modern web technologies."
+    description="Hi! I'm a freelance frontend engineer based in Copenhagen doing frontend development using modern web technologies."
     keywords="Anders Kjær Damgaard,frontend,web,software,developer,development"
   >
     <IndexContainer>
       <Card>
         <HeaderSection>
-          <ProfilePictureContainer>
-            <ProfilePicture
-              src="/static/picture.png"
+          <PortraitContainer>
+            <Portrait
+              src={portrait.src}
               alt="Portrait photograph of Anders Kjær Damgaard."
+              layout="fill"
             />
-          </ProfilePictureContainer>
+          </PortraitContainer>
           <NameHeading>Anders Kjær Damgaard</NameHeading>
           <JobTitle>Freelance Frontend Engineer</JobTitle>
           <Location>Copenhagen, Denmark</Location>
