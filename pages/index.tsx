@@ -6,15 +6,16 @@ import Button from '../components/public/Button';
 import { owl } from '../utils/owl';
 import portrait from '../public/images/portrait.jpg';
 import Image from 'next/image';
+import { Anchor } from '../components/public/Anchor';
 
-const IndexContainer = styled.div`
+const PageContainer = styled.div`
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 
-const Card = styled.div`
+const FadeInContainer = styled.div`
   width: 100%;
   max-width: 600px;
   padding: 40px;
@@ -22,7 +23,6 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 
   animation-name: fadein;
   animation-duration: 1s;
@@ -51,21 +51,34 @@ const HeaderSection = styled(Section)`
 `;
 
 const ParagraphSection = styled(Section)`
+  margin-top: 60px;
+
+  align-items: flex-start;
+
+  > ${owl} {
+    margin-top: 20px;
+  }
+`;
+
+const LatestReleaseSection = styled(Section)`
   margin-top: 40px;
+
+  align-items: flex-start;
+
   > ${owl} {
     margin-top: 20px;
   }
 `;
 
 const FollowMeSection = styled(Section)`
-  margin-top: 40px;
+  margin-top: 60px;
   text-align: center;
 `;
 
 const PortraitContainer = styled.div`
   position: relative;
-  width: 65%;
-  padding-bottom: 65%;
+  width: 40%;
+  padding-bottom: 40%;
 `;
 
 const Portrait = styled(Image)`
@@ -105,7 +118,7 @@ const A = styled.a`
   color: black;
 `;
 
-const FollowMeHeading = styled.h2`
+const H2 = styled.h2`
   margin: 0;
   font-size: 20px;
   font-weight: bold;
@@ -122,12 +135,12 @@ const ButtonsContainer = styled.div`
 
 const Index: NextPage = () => (
   <PageWrapperWithMetadata
-    title="Anders Kjær Damgaard | akd.io"
-    description="Hi! I'm a freelance frontend engineer based in Copenhagen doing frontend development using modern web technologies."
-    keywords="Anders Kjær Damgaard,frontend,web,software,developer,development"
+    title="Anders Kjær Damgaard | akd.io"
+    description="Hello! 👋 I'm a freelance frontend engineer based in Copenhagen doing frontend development using modern web technologies."
+    keywords="Anders Kjær Damgaard,freelance,consultant,consulting,senior,lead,frontend,front-end,web,software,developer,development,react,next,next.js"
   >
-    <IndexContainer>
-      <Card>
+    <PageContainer>
+      <FadeInContainer>
         <HeaderSection>
           <PortraitContainer>
             <Portrait
@@ -141,33 +154,51 @@ const Index: NextPage = () => (
           <Location>Copenhagen, Denmark</Location>
         </HeaderSection>
         <ParagraphSection>
+          <H2>Hello! 👋</H2>
           <Paragraph>
-            Hi! My name is Anders, and I am a passionate frontend engineer currently obsessed with
-            Next.js, TypeScript, GraphQL and Serverless.
+            My name is Anders, and I am a passionate frontend engineer obsessed with improving
+            software development projects, from enhancing user and developer experience to
+            increasing maintainability and agility.
           </Paragraph>
           <Paragraph>
-            I have spent the last 3 years employed at IT Minds and later Trifork, consulting as a
-            frontend web developer on a dozen different projects for a dozen different companies. I
-            have worked with many different teams, technologies and processes, and absolutely love
-            the large amount of learning opportunities the ever-changing environment has to offer.
+            I have spent the last 4 years consulting as a frontend web developer for a dozen
+            different companies. I have worked with many teams, technologies, and processes and love
+            the ever-changing environment&apos;s many learning opportunities.
           </Paragraph>
           <Paragraph>
-            I have recently taken the final step and become an independent consultant. If you are
-            looking for someone strong in React, Redux, TypeScript, JavaScript, HTML, CSS,
-            CSS-in-JS, etc., then check out my CV and shoot me a message on{' '}
-            <A href="https://www.linkedin.com/in/anders-damgaard/">LinkedIn</A>!
+            Whether you are looking for a frontend lead to lay a good foundation for your next web
+            development project or an experienced React developer to help finish the last user
+            stories before the deadline,{' '}
+            <Anchor isExternal href="https://www.linkedin.com/in/anders-damgaard/">
+              LinkedIn
+            </Anchor>{' '}
+            is the place to get in touch.
           </Paragraph>
         </ParagraphSection>
+        <LatestReleaseSection>
+          <H2>Latest release</H2>
+          <Paragraph>
+            I recently released{' '}
+            <Anchor isExternal href="https://www.create-next-stack.com/">
+              Create Next Stack
+            </Anchor>
+            , an open-source website and CLI tool that helps frontend teams get{' '}
+            <Anchor isExternal href="https://nextjs.org/">
+              Next.js
+            </Anchor>{' '}
+            projects set up in minutes instead of days. Check it out!
+          </Paragraph>
+        </LatestReleaseSection>
         <FollowMeSection>
-          <FollowMeHeading>Follow me online</FollowMeHeading>
+          <H2>Follow me online</H2>
           <ButtonsContainer>
             <Button href="https://twitter.com/akd_io">Twitter</Button>
             <Button href="https://github.com/akd-io">GitHub</Button>
             <Button href="https://www.linkedin.com/in/anders-damgaard/">LinkedIn</Button>
           </ButtonsContainer>
         </FollowMeSection>
-      </Card>
-    </IndexContainer>
+      </FadeInContainer>
+    </PageContainer>
   </PageWrapperWithMetadata>
 );
 
