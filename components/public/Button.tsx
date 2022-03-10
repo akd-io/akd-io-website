@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 const Button = styled.a`
-  transform: scale(0.95);
+  transform: translate3d(0, 0, 0);
 
   margin: 0.5em;
   border-radius: 0.5em;
@@ -10,12 +10,12 @@ const Button = styled.a`
   display: inline-block;
   background: white;
   color: black;
-  text-decoration: none;
 
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
 
-  transition: transform 0.15s, box-shadow 0.15s;
+  transition: box-shadow 0.15s, margin 0.15s, padding 0.15s;
 
+  &,
   &:link,
   &:visited,
   &:hover,
@@ -25,8 +25,9 @@ const Button = styled.a`
 
   &:hover,
   &:active {
-    transform: scale(1);
     box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.1);
+    margin: 0.25em;
+    padding: 1em 1.25em;
   }
 `;
 
