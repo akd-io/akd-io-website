@@ -161,7 +161,7 @@ const Index: NextPage = () => (
             increasing maintainability and agility.
           </Paragraph>
           <Paragraph>
-            I have spent the last 4 years consulting as a frontend web developer for a dozen
+            I have spent the last 5 years consulting as a frontend web developer for a dozen
             different companies. I have worked with many teams, technologies, and processes and love
             the ever-changing environment&apos;s many learning opportunities.
           </Paragraph>
@@ -176,17 +176,17 @@ const Index: NextPage = () => (
           </Paragraph>
         </ParagraphSection>
         <LatestReleaseSection>
-          <H2>Latest release</H2>
+          <H2>Create Next Stack</H2>
           <Paragraph>
-            I recently released{' '}
+            Check out{' '}
             <Anchor isExternal href="https://www.create-next-stack.com/">
               Create Next Stack
             </Anchor>
-            , an open-source website and CLI tool that helps frontend teams get{' '}
+            , an open-source website and CLI tool I built that helps frontend teams get{' '}
             <Anchor isExternal href="https://nextjs.org/">
               Next.js
             </Anchor>{' '}
-            projects set up in minutes instead of days. Check it out!
+            projects set up in minutes instead of days.
           </Paragraph>
         </LatestReleaseSection>
         <FollowMeSection>
