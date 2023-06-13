@@ -182,7 +182,7 @@ const Index: NextPage = () => (
             <Anchor isExternal href="https://www.create-next-stack.com/">
               Create Next Stack
             </Anchor>
-            , an open-source website and CLI tool that helps frontend teams get{' '}
+            , an open-source website and CLI tool I built that helps frontend teams get{' '}
             <Anchor isExternal href="https://nextjs.org/">
               Next.js
             </Anchor>{' '}
