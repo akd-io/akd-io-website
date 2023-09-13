@@ -4,6 +4,7 @@ import BasePageWrapper from './BasePageWrapper';
 
 interface PageWrapperWithoutMetadataProps {
   title: string;
+  children: React.ReactNode;
 }
 const PageWrapperWithoutMetadata: FC<PageWrapperWithoutMetadataProps> = ({ title, children }) => (
   <BasePageWrapper>

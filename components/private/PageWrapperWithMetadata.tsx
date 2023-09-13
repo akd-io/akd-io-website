@@ -1,11 +1,12 @@
 import Head from 'next/head';
-import { FC } from 'react';
+import React, { FC } from 'react';
 import BasePageWrapper from './BasePageWrapper';
 
 interface PageWrapperWithMetadataProps {
   title: string;
   description: string;
   keywords: string;
+  children: React.ReactNode;
 }
 const PageWrapperWithMetadata: FC<PageWrapperWithMetadataProps> = ({
   title,
