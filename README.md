@@ -5,18 +5,18 @@ This is the repository for the website of Anders Kjær Damgaard at [akd.io](http
 ## Setup
 
 1. Make sure you have [Node.js](https://nodejs.org/) installed.
-2. Run `npm i -g yarn` - Install the Yarn package manager globally.
-3. Run `yarn` - Install dependencies.
+2. Run `npm i -g pnpm` - Install the pnpm package manager globally.
+3. Run `pnpm` - Install dependencies.
 
 ## Development
 
-✏️ Run `yarn dev` to host the site in development mode featuring hot-reloading.  
+✏️ Run `pnpm dev` to host the site in development mode featuring hot-reloading.
 
-🛠 Run `yarn build` to build the site.  
+🛠 Run `pnpm build` to build the site.
 
-📤 Run `yarn export` to export the site as static files.  
+📤 Run `pnpm export` to export the site as static files.
 
-🚀 Run `yarn start` to launch the site on a local web server.
+🚀 Run `pnpm start` to launch the site on a local web server.
 
 ## Deployment
 
