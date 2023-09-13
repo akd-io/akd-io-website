@@ -1,12 +1,11 @@
 import styled from '@emotion/styled';
 import { NextPage } from 'next';
-import React from 'react';
+import Image from 'next/legacy/image';
 import PageWrapperWithMetadata from '../components/private/PageWrapperWithMetadata';
-import Button from '../components/public/Button';
-import { owl } from '../utils/owl';
-import portrait from '../public/images/portrait.jpg';
-import Image from 'next/image';
 import { Anchor } from '../components/public/Anchor';
+import Button from '../components/public/Button';
+import portrait from '../public/images/portrait.jpg';
+import { owl } from '../utils/owl';
 
 const PageContainer = styled.div`
   min-height: 100vh;
@@ -92,18 +91,20 @@ const Portrait = styled(Image)`
 `;
 
 const NameHeading = styled.h1`
+  margin: 0.67em 0;
+  line-height: 1em;
   font-size: 30px;
   font-weight: 700;
 `;
 
 const JobTitle = styled.span`
-  margin-bottom: 0;
+  line-height: 1.15em;
   font-size: 25px;
   font-weight: 300;
 `;
 
 const Location = styled.span`
-  margin-top: 0;
+  line-height: 1.15em;
   font-size: 20px;
   font-weight: 300;
 `;

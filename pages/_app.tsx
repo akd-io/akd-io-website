@@ -1,8 +1,12 @@
+import { ChakraProvider } from '@chakra-ui/react';
 import type { AppProps } from 'next/app';
-import 'normalize.css';
 
 const CustomApp = ({ Component, pageProps }: AppProps): JSX.Element => {
-  return <Component {...pageProps} />;
+  return (
+    <ChakraProvider>
+      <Component {...pageProps} />;
+    </ChakraProvider>
+  );
 };
 
 export default CustomApp;
