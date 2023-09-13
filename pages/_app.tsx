@@ -4,7 +4,7 @@ import type { AppProps } from 'next/app';
 const CustomApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   return (
     <ChakraProvider>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </ChakraProvider>
   );
 };
