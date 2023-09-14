@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import { FC, PropsWithChildren } from 'react';
+import Head from "next/head"
+import { FC, PropsWithChildren } from "react"
 
 const BasePageWrapper: FC<PropsWithChildren> = ({ children }) => (
   <>
@@ -8,6 +8,6 @@ const BasePageWrapper: FC<PropsWithChildren> = ({ children }) => (
     </Head>
     {children}
   </>
-);
+)
 
-export default BasePageWrapper;
+export default BasePageWrapper

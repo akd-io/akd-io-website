@@ -1,9 +1,9 @@
-import PageWrapperWithMetadata from '@/components/private/PageWrapperWithMetadata';
-import { Anchor } from '@/components/public/Anchor';
-import { Button } from '@/components/ui/button';
-import { NextPage } from 'next';
-import Image from 'next/image';
-import portrait from 'public/images/portrait.jpg';
+import PageWrapperWithMetadata from "@/components/private/PageWrapperWithMetadata"
+import { Anchor } from "@/components/public/Anchor"
+import { Button } from "@/components/ui/button"
+import { NextPage } from "next"
+import Image from "next/image"
+import portrait from "public/images/portrait.jpg"
 
 const Index: NextPage = () => (
   <PageWrapperWithMetadata
@@ -48,14 +48,14 @@ const Index: NextPage = () => (
         <section className="flex max-w-lg flex-col gap-3">
           <h2 className="text-xl font-bold">Create Next Stack</h2>
           <p>
-            Check out{' '}
+            Check out{" "}
             <Anchor isExternal href="https://www.create-next-stack.com/">
               Create Next Stack
             </Anchor>
-            , an open-source website and CLI tool I built that helps frontend teams get{' '}
+            , an open-source website and CLI tool I built that helps frontend teams get{" "}
             <Anchor isExternal href="https://nextjs.org/">
               Next.js
-            </Anchor>{' '}
+            </Anchor>{" "}
             projects set up in minutes instead of days.
           </p>
         </section>
@@ -76,6 +76,6 @@ const Index: NextPage = () => (
       </main>
     </div>
   </PageWrapperWithMetadata>
-);
+)
 
-export default Index;
+export default Index
