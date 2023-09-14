@@ -1,5 +1,5 @@
-import PageWrapperWithMetadata from "@/components/private/PageWrapperWithMetadata"
-import { Anchor } from "@/components/public/Anchor"
+import { Anchor } from "@/components/Anchor"
+import PageWrapperWithMetadata from "@/components/PageWrapperWithMetadata"
 import { Button } from "@/components/ui/button"
 import { NextPage } from "next"
 import Image from "next/image"
