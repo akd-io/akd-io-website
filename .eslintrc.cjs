@@ -12,6 +12,9 @@ const config = {
     "next/core-web-vitals", // Adds plugins import, react, react-hooks, jsx-a11y, and overrides rules for Next.js
     "prettier", // Disables ESLint rules that conflict with Prettier
   ],
+  rules: {
+    "@typescript-eslint/consistent-type-definitions": ["warn", "type"], // Enforces consistent usage of type definitions
+  },
 }
 
 module.exports = config
