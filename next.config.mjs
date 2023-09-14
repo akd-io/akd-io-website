@@ -5,4 +5,4 @@ const nextConfig = {
   reactStrictMode: true,
 }
 
-module.exports = withPlausibleProxy()(nextConfig)
+export default withPlausibleProxy()(nextConfig)
