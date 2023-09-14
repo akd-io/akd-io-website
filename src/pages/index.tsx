@@ -1,4 +1,5 @@
 import { Anchor } from "@/components/Anchor"
+import { ModeToggle } from "@/components/ModeToggle"
 import PageWrapperWithMetadata from "@/components/PageWrapperWithMetadata"
 import { Button } from "@/components/ui/button"
 import { NextPage } from "next"
@@ -14,6 +15,9 @@ const Index: NextPage = () => (
     <div className="flex min-h-screen w-full flex-col items-center justify-center px-4 py-12">
       <main className="flex flex-col gap-12">
         <section className="flex max-w-lg flex-col items-center gap-3">
+          <div className="flex w-full justify-end">
+            <ModeToggle />
+          </div>
           <div className="h-32 w-32 sm:h-52 sm:w-52">
             <Image
               className="rounded-full"
