@@ -1,6 +1,6 @@
-import { Anchor } from "@/components/public/Anchor"
+import { Anchor } from "@/components/Anchor"
 import { FC } from "react"
-import PageWrapperWithoutMetadata from "../components/private/PageWrapperWithoutMetadata"
+import PageWrapperWithoutMetadata from "../components/PageWrapperWithoutMetadata"
 
 const Page404: FC = () => (
   <PageWrapperWithoutMetadata title="Page not found">
