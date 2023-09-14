@@ -66,13 +66,13 @@ const Index: NextPage = () => (
         <section className="flex max-w-lg flex-col items-center gap-4">
           <h2 className="text-xl font-bold">Follow me online</h2>
           <div className="flex gap-3">
-            <Button variant="secondary" asChild>
+            <Button variant="outline" asChild>
               <a href="https://twitter.com/akd_io">Twitter</a>
             </Button>
-            <Button variant="secondary" asChild>
+            <Button variant="outline" asChild>
               <a href="https://github.com/akd-io">GitHub</a>
             </Button>
-            <Button variant="secondary" asChild>
+            <Button variant="outline" asChild>
               <a href="https://www.linkedin.com/in/anders-damgaard/">LinkedIn</a>
             </Button>
           </div>
