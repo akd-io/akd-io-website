@@ -1,9 +1,9 @@
-import PageWrapperWithMetadata from "@/components/private/PageWrapperWithMetadata";
-import { Anchor } from "@/components/public/Anchor";
-import { Button } from "@/components/ui/button";
-import { NextPage } from "next";
-import Image from "next/image";
-import portrait from "public/images/portrait.jpg";
+import PageWrapperWithMetadata from '@/components/private/PageWrapperWithMetadata';
+import { Anchor } from '@/components/public/Anchor';
+import { Button } from '@/components/ui/button';
+import { NextPage } from 'next';
+import Image from 'next/image';
+import portrait from 'public/images/portrait.jpg';
 
 const Index: NextPage = () => (
   <PageWrapperWithMetadata
@@ -30,35 +30,32 @@ const Index: NextPage = () => (
         <section className="flex max-w-lg flex-col gap-3">
           <h2 className="text-xl font-bold">Hello! 👋</h2>
           <p>
-            My name is Anders, and I am a passionate frontend engineer obsessed
-            with improving software development projects, from enhancing user
-            and developer experience to increasing maintainability and agility.
+            My name is Anders, and I am a passionate frontend engineer obsessed with improving
+            software development projects, from enhancing user and developer experience to
+            increasing maintainability and agility.
           </p>
           <p>
-            I have spent the last 5 years consulting as a frontend web developer
-            for a dozen different companies. I have worked with many teams,
-            technologies, and processes and love the ever-changing
-            environment&apos;s many learning opportunities.
+            I have spent the last 5 years consulting as a frontend web developer for a dozen
+            different companies. I have worked with many teams, technologies, and processes and love
+            the ever-changing environment&apos;s many learning opportunities.
           </p>
           <p>
-            Whether you are looking for a frontend lead to lay a good foundation
-            for your next web development project, an experienced React
-            developer to help finish the last user stories before the deadline,
-            or a full-stack developer to build a smaller web app, get in touch!
+            Whether you are looking for a frontend lead to lay a good foundation for your next web
+            development project, an experienced React developer to help finish the last user stories
+            before the deadline, or a full-stack developer to build a smaller web app, get in touch!
           </p>
         </section>
         <section className="flex max-w-lg flex-col gap-3">
           <h2 className="text-xl font-bold">Create Next Stack</h2>
           <p>
-            Check out{" "}
+            Check out{' '}
             <Anchor isExternal href="https://www.create-next-stack.com/">
               Create Next Stack
             </Anchor>
-            , an open-source website and CLI tool I built that helps frontend
-            teams get{" "}
+            , an open-source website and CLI tool I built that helps frontend teams get{' '}
             <Anchor isExternal href="https://nextjs.org/">
               Next.js
-            </Anchor>{" "}
+            </Anchor>{' '}
             projects set up in minutes instead of days.
           </p>
         </section>
@@ -72,9 +69,7 @@ const Index: NextPage = () => (
               <a href="https://github.com/akd-io">GitHub</a>
             </Button>
             <Button variant="secondary" asChild>
-              <a href="https://www.linkedin.com/in/anders-damgaard/">
-                LinkedIn
-              </a>
+              <a href="https://www.linkedin.com/in/anders-damgaard/">LinkedIn</a>
             </Button>
           </div>
         </section>
