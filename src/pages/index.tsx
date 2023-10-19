@@ -53,11 +53,11 @@ const Index: NextPage = () => (
           <h2 className="text-xl font-bold">Create Next Stack</h2>
           <p>
             Check out{" "}
-            <Anchor isExternal href="https://www.create-next-stack.com/">
+            <Anchor isExternal href="https://www.create-next-stack.com/" target="_blank">
               Create Next Stack
             </Anchor>
             , an open-source website and CLI tool I built that helps frontend teams get{" "}
-            <Anchor isExternal href="https://nextjs.org/">
+            <Anchor isExternal href="https://nextjs.org/" target="_blank">
               Next.js
             </Anchor>{" "}
             projects set up in minutes instead of days.
@@ -67,13 +67,19 @@ const Index: NextPage = () => (
           <h2 className="text-xl font-bold">Follow me online</h2>
           <div className="flex gap-3">
             <Button variant="outline" asChild>
-              <a href="https://twitter.com/akd_io">Twitter</a>
+              <a href="https://twitter.com/akd_io" target="_blank">
+                Twitter
+              </a>
             </Button>
             <Button variant="outline" asChild>
-              <a href="https://github.com/akd-io">GitHub</a>
+              <a href="https://github.com/akd-io" target="_blank">
+                GitHub
+              </a>
             </Button>
             <Button variant="outline" asChild>
-              <a href="https://www.linkedin.com/in/anders-damgaard/">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/anders-damgaard/" target="_blank">
+                LinkedIn
+              </a>
             </Button>
           </div>
         </section>
