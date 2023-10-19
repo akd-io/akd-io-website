@@ -20,6 +20,7 @@ const Index: NextPage = () => {
       href: "https://www.builder.io/blog/hydration-sabotages-lazy-loading",
     },
     { title: "Qwik Docs", href: "https://qwik.builder.io/docs/" },
+    { title: "Qwik Docs: Qwik City", href: "https://qwik.builder.io/docs/qwikcity/" },
     { title: "Qwik Docs: Think Qwik", href: "https://qwik.builder.io/docs/concepts/think-qwik/" },
     { title: "Qwik Docs: Resumable", href: "https://qwik.builder.io/docs/concepts/resumable/" },
     { title: "Qwik Docs: Progressive", href: "https://qwik.builder.io/docs/concepts/progressive/" },
