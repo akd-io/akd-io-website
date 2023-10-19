@@ -12,7 +12,7 @@ const Index: NextPage = () => (
     description="Hello! 👋 I'm a freelance frontend engineer based in Copenhagen doing frontend development using modern web technologies."
     keywords="Anders Kjær Damgaard,freelance,consultant,consulting,senior,lead,frontend,front-end,web,software,developer,development,react,next,next.js"
   >
-    <div className="flex min-h-screen w-full flex-col items-center justify-center px-4 py-12">
+    <div className="flex min-h-screen w-full flex-col items-center justify-center px-4 pb-12 pt-4">
       <main className="flex flex-col gap-12">
         <section className="flex max-w-lg flex-col items-center gap-3">
           <div className="flex w-full justify-end">

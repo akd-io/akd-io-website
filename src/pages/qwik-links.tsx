@@ -42,7 +42,7 @@ const Index: NextPage = () => {
       description="Useful links for getting started with Qwik. From my talk, Qwik and Resumability."
       keywords="qwik,resumability,web,frontend,development"
     >
-      <div className="flex min-h-screen w-full flex-col items-center justify-center px-4 py-12">
+      <div className="flex min-h-screen w-full flex-col items-center justify-center px-4 pb-12 pt-4">
         <main className="flex flex-col gap-12">
           <section className="flex max-w-lg flex-col items-center gap-12">
             <div className="flex w-full items-center justify-between">
