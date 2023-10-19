@@ -48,11 +48,10 @@ const Index: NextPage = () => {
           <section className="flex max-w-lg flex-col gap-3">
             <h2 className="text-xl font-bold">Hello! 👋</h2>
             <p>
-              On October 19, 2023 I held a talk at CopenhagenJS titled "Qwik and Resumability". This
-              page compiles a list of useful links for the attendees to get started with Qwik.
+              {`On October 19, 2023 I held a talk at CopenhagenJS titled "Qwik and Resumability". This page compiles a list of useful links for the attendees to get started with Qwik.`}
             </p>
             <p>
-              If you didn't attend the talk, or are interested anyway, check out the{" "}
+              {`If you didn't attend the talk, or are interested anyway, check out the `}
               <Anchor
                 href="https://docs.google.com/presentation/d/e/2PACX-1vRVlmQNmpwlSNWUgpTe_l3nMrR0W4S55VIknSfLWN6ghMK7bOJ5xd63VAJo-L5Br1JVZnKOIwxJw3AA/pub?start=false&loop=false&delayms=3000"
                 isExternal
