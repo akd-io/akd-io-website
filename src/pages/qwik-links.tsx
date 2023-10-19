@@ -20,6 +20,7 @@ const Index: NextPage = () => {
       href: "https://www.builder.io/blog/hydration-sabotages-lazy-loading",
     },
     { title: "Qwik Docs", href: "https://qwik.builder.io/docs/" },
+    { title: "Qwik Docs: Qwik City", href: "https://qwik.builder.io/docs/qwikcity/" },
     { title: "Qwik Docs: Think Qwik", href: "https://qwik.builder.io/docs/concepts/think-qwik/" },
     { title: "Qwik Docs: Resumable", href: "https://qwik.builder.io/docs/concepts/resumable/" },
     { title: "Qwik Docs: Progressive", href: "https://qwik.builder.io/docs/concepts/progressive/" },
@@ -42,7 +43,7 @@ const Index: NextPage = () => {
       description="Useful links for getting started with Qwik. From my talk, Qwik and Resumability."
       keywords="qwik,resumability,web,frontend,development"
     >
-      <div className="flex min-h-screen w-full flex-col items-center justify-center px-4 py-12">
+      <div className="flex min-h-screen w-full flex-col items-center justify-center px-4 pb-12 pt-4">
         <main className="flex flex-col gap-12">
           <section className="flex max-w-lg flex-col items-center gap-12">
             <div className="flex w-full items-center justify-between">
