@@ -8,12 +8,9 @@ type AnchorProps = ComponentProps<typeof Link> & {
 }
 export const Anchor: FC<AnchorProps> = ({ isExternal, children, ...restProps }) => {
   return (
-    <Link
-      className="inline-flex items-center font-bold text-blue-500 hover:underline"
-      {...restProps}
-    >
+    <Link className="font-bold text-blue-500 hover:underline" {...restProps}>
       {children}
-      {isExternal && <RxExternalLink className="ml-0.5 inline" />}
+      {isExternal && <RxExternalLink className="ml-0.5 inline align-text-bottom" />}
     </Link>
   )
 }
